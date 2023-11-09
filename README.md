@@ -42,7 +42,6 @@ AllBig.txt
 *****************************************
 GUIDE TO MAGMA FILES:
 *****************************************
-*****************************************
 GSpF3
 *****************************************
 checks that if g in 2C,2D,6G,6H,6I,
@@ -119,7 +118,7 @@ AllBig.tex
 File from LMFDB with all X such that Jac(X)
 has good reduction at 2 and 3 and surjective
 mod-3 torsion rep.
-*****************************************%
+*****************************************
 allstats
 *****************************************
 Checks which curves in AllBig.tex satisfy
