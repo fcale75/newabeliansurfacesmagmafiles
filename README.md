@@ -1,2 +1,148 @@
 # newabeliansurfacesmagmafiles
 magma files for the paper "MODULARITY THEOREMS FOR ABELIAN SURFACES"
+
+#########################################
+Numbering as of revision 567
+#########################################
+We begin with listing lemmas of the paper
+with some significant computation and the
+relevant files in the paper.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Lemma 3.4.1 AND
+Lemma 3.4.3
+
+RegularSemisimple
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Lemma 8.1.3. Code for this isomorphism
+is given in
+
+ExplicitGSpF2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Lemma 9.1.4 uses:
+
+Qexamples
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Lemma 9.1.6 uses:
+
+allcurvesF2
+curvesoverF16
+GSpF3
+curves6H6G
+decide6H6G
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Lemma 9.3.1 uses:
+
+curvesoverF3
+distinguished
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Examples in 10.1.1 uses:
+
+allstats
+AllBig.txt
+#########################################
+GUIDE TO MAGMA FILES:
+#########################################
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+GSpF3
+*****************************************
+checks that if g in 2C,2D,6G,6H,6I,
+then g^4-1 is zero iff g has order 2.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+allcurvesF2
+*****************************************
+computation of all curves over F2 of
+genus 2, which in particular collates all
+the good ordinary curves.
+It also computes the number of curves
+with the same characterstic polynomial
+as the conjugacy classes of types
+{2C,6G,6H}, {2D,6I}, 8A, 10A.
+Optional (commented out), prints out full
+list of ordinary curves.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+curvesoverF16
+*****************************************
+computes the 48 ambiguous curves of
+possible type 2C/6G/6H and 2D/6I over F2
+now over F16 to verify that the 3-torsion
+is always (Z/3Z)^2 thus showng that 2C,2D
+do not occur. Optional (commented out),
+prints out full list of ambiguous curves
+6G/6H for future processing.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+curvesoverF3
+*****************************************
+computes the curves over F3, and counts
+how many times each of the 40 possible
+conjugacy classes occur (only 36 occur at
+least once). Checks the 141 curves for
+which Frobenius is x^2*(1+x)^2. checks
+that only 5 have Jac(X)=Z/3Z x Z/3Z and
+these are not 3-distinguished in char=0.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+curves6H6G
+*****************************************
+list of curves with good reduction at 2
+such that rhobar_3(\Frob_2) is either of
+type 6G or 6H, computed by allcurvesF2.
+Broken into two sets of ordinary and 
+non-ordinary curves each of size 24. 
+The forms have been chosen to have a non-
+zero coefficient of z^6 for the division
+algorithm to work. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+distinguished
+*****************************************
+Finds the X with Jac(X)(F_3)[3]= (Z/3Z)^2
+and confirms there are exactly 5 of them,
+and Q(X) = P(X)^2 in those cases.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+decide6H
+*****************************************
+use division polynomials to compute the
+degree 40 map Gal(K/Q)-->PGSp_4(F_3)-->S_40
+then compute resolventsto get
+Gal(K/Q)-->S_27, then work out conjugacy
+class of Frob_2 from curves6H6G data.
+This is very slow, sorry.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+divisionpolynomials.m
+*****************************************
+Given
+y^2=x^6+a*x^4+b*x^3+c*x^2+d*x+e;
+compute the degree 40 permutation
+representation of Gal(K/Q)
+(via PGSp_4(F_3)-->S_40)).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+AllBig.tex
+*****************************************
+File from LMFDB with all X such that Jac(X)
+has good reduction at 2 and 3 and surjective
+mod-3 torsion rep.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+allstats
+*****************************************
+Checks which curves in AllBig.tex satisfy
+the main theorem.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+permutationreps
+*****************************************
+action of GSp on 80 and 27 points; noting
+that if the action on 40 and 27 points is
+transitive the image is surjective.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Qexamples
+*****************************************
+The 3 examples in the paper with WP over Q
+and the three Euler factors at 2.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Weierstrassdivision.m
+*****************************************
+the degree 40 and 27 polynomials associated
+to y^2 = quintic
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+RegularSemisimple
+*****************************************
+Generates the Whitmore table with the
+regular semisimple element condition
+as well.
