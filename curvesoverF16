@@ -1,0 +1,102 @@
+F<x>:=PolynomialRing(FiniteField(16));
+FF<z>:=PolynomialRing(FiniteField(3));
+H<t>:=PolynomialRing(Rationals());
+G2:=IdentifyGroup(SmallGroup(9,2));
+G1:=IdentifyGroup(SmallGroup(1,1));
+g2c:=0;
+g6h:=0;
+g2d:=0;
+g6i:=0;
+counth:=0;
+counti:=0;
+typeH:=[];
+longtypeH:=[];
+threetorsion:=[];
+Z:=Integers();
+restrictH:=[z^4 + 2*z^2+1];
+restrictI:=[z^4 + z^2+1];
+power:=0;
+all:=0;
+ordinary:=0;
+for b in [0..1] do
+for c in [0..1] do
+for d in [0..1] do
+for e in [0..1] do
+for f in [0..1] do
+for g in [0..1] do
+for h in [0..1] do
+for i in [0..1] do
+for j in [0..1] do
+for k in [0..1] do
+power:=power+1;
+try
+ C:=HyperellipticCurve(b*x^5 + c*x^4 + d*x^3 + e*x^2 + f*x + g, h*x^3 + i*x^2 + j*x + k);
+	catch z;
+        continue;
+end try;
+if Genus(C) eq 2 then
+	all:=all+1;
+	A:=b*t^5+c*t^4+d*t^3+e*t^2+f*t+g;
+	B:=h*t^3+i*t^2 + j*t + k;
+	D:=HyperellipticCurve(A,B);
+	P:=H!EulerFactor(D,2); P3:=FF!EulerFactor(D,2); 
+	b2:=Z!Coefficient(P,2);
+	if GCD(b2,2) eq 1 then
+		if P3 in restrictH then
+			typeH:=Append(typeH,[4*A+(2*t^3 + B)^2]);
+			longtypeH:=Append(longtypeH,[A,B]);
+			counth:=counth+1;
+			C:=HyperellipticCurve(F!A,F!B);
+			AA:=AbelianGroup(Jacobian(C)); 
+			AAA:=Sylow(AA,3); 
+			AAAA:=IdentifyGroup(AAA);
+			if AAAA eq G1 then g2c:=g2c+1; end if;
+			if AAAA eq G2 then g6h:=g6h+1; end if;
+			end if;
+	       if P3 in restrictI then
+			counti:=counti+1;
+                        C:=HyperellipticCurve(F!A,F!B);
+                        AA:=AbelianGroup(Jacobian(C));
+                        AAA:=Sylow(AA,3);
+                        AAAA:=IdentifyGroup(AAA);
+                        if AAAA eq G1 then g2d:=g2d+1; end if;
+                        if AAAA eq G2 then g6i:=g6i+1; end if;
+                        end if;
+                end if;
+	end if;
+end for;
+end for;
+end for;
+end for;
+end for;
+end for;
+end for;
+end for;
+end for;
+end for;
+print("****** the 24 curves of type 2C/2G/2H are ******");
+counth;
+print("******* Given the 24 X/F_2 smooth ordinary with charpoly(rho_{3}(Frob_2)) of type 2C/6G/6H  ****");
+print("******* the possible Jac(F4)[3^oo] are ******");
+print(" the trivial group occurs this many times: ");
+g2c;
+print(" the group (Z/3Z)^2 occurs this many times: ");
+g6h;
+print("******* Given the 24 X/F_2 smooth ordinary with charpoly(rho_{3}(Frob_2)) of type 2D/6I  ****");
+counti;
+print("******* the possible Jac(F4)[3^oo] are ******");
+print(" the trivial group occurs this many times: ");
+g2d;
+print(" the group (Z/3Z)^2 occurs this many times: ");
+g6i;
+
+/* commented out
+print("finally, print out the list of curves of type 6G/6H for further
+processing to distinguish 6G and 6H");
+for n in [1..#typeH] do
+P:=typeH[n][1];
+C:=HyperellipticCurve(P);
+P;
+end for;
+longtypeH;
+*/

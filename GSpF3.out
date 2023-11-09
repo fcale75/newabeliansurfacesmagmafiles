@@ -1,0 +1,104 @@
+Magma V2.23-9     Thu Jul 13 2023 03:06:47 on hegel    [Seed = 3541567357]
+
++-------------------------------------------------------------------+
+|       This copy of Magma has been made available through a        |
+|                   generous initiative of the                      |
+|                                                                   |
+|                         Simons Foundation                         |
+|                                                                   |
+| covering U.S. Colleges, Universities, Nonprofit Research entities,|
+|               and their students, faculty, and staff              |
++-------------------------------------------------------------------+
+
+Type ? for help.  Type <Ctrl>-D to quit.
+********
+c in PGSp_4(F3) has order:
+2
+char and min polys of c are
+x^4 + x^2 + 1
+x^2 + 2
+char and min polys of c^2 are
+x^4 + 2*x^3 + 2*x + 1
+x + 2
+null space of c^4 - 1 is
+Full RSpace of degree 4 over Univariate Polynomial Ring in x over GF(3)
+char and min polys of c^3 are
+x^4 + x^2 + 1
+x^2 + 2
+order of conjugacy class is
+540
+********
+c in PGSp_4(F3) has order:
+2
+char and min polys of c are
+x^4 + 2*x^2 + 1
+x^2 + 1
+char and min polys of c^2 are
+x^4 + x^3 + x + 1
+x + 1
+null space of c^4 - 1 is
+Full RSpace of degree 4 over Univariate Polynomial Ring in x over GF(3)
+char and min polys of c^3 are
+x^4 + 2*x^2 + 1
+x^2 + 1
+order of conjugacy class is
+36
+********
+c in PGSp_4(F3) has order:
+6
+char and min polys of c are
+x^4 + x^2 + 1
+x^4 + x^2 + 1
+char and min polys of c^2 are
+x^4 + 2*x^3 + 2*x + 1
+x^2 + x + 1
+null space of c^4 - 1 is
+RSpace of degree 4, dimension 2 over Univariate Polynomial Ring in x over GF(3)
+Echelonized basis:
+(1 1 0 0)
+(0 0 1 2)
+char and min polys of c^3 are
+x^4 + x^2 + 1
+x^4 + x^2 + 1
+order of conjugacy class is
+4320
+********
+c in PGSp_4(F3) has order:
+6
+char and min polys of c are
+x^4 + 2*x^2 + 1
+x^4 + 2*x^2 + 1
+char and min polys of c^2 are
+x^4 + x^3 + x + 1
+x^2 + 2*x + 1
+null space of c^4 - 1 is
+RSpace of degree 4, dimension 2 over Univariate Polynomial Ring in x over GF(3)
+Echelonized basis:
+(0 0 1 0)
+(0 0 0 1)
+char and min polys of c^3 are
+x^4 + 2*x^2 + 1
+x^4 + 2*x^2 + 1
+order of conjugacy class is
+1440
+********
+c in PGSp_4(F3) has order:
+6
+char and min polys of c are
+x^4 + 2*x^2 + 1
+x^4 + 2*x^2 + 1
+char and min polys of c^2 are
+x^4 + x^3 + x + 1
+x^2 + 2*x + 1
+null space of c^4 - 1 is
+RSpace of degree 4, dimension 2 over Univariate Polynomial Ring in x over GF(3)
+Echelonized basis:
+(0 0 1 0)
+(0 0 0 1)
+char and min polys of c^3 are
+x^4 + 2*x^2 + 1
+x^4 + 2*x^2 + 1
+order of conjugacy class is
+1440
+
+Total time: 1.159 seconds, Total memory usage: 73.25MB

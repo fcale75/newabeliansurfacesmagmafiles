@@ -1,0 +1,39 @@
+Magma V2.23-9     Thu Nov  9 2023 09:47:44 on hegel    [Seed = 2928096447]
+
++-------------------------------------------------------------------+
+|       This copy of Magma has been made available through a        |
+|                   generous initiative of the                      |
+|                                                                   |
+|                         Simons Foundation                         |
+|                                                                   |
+| covering U.S. Colleges, Universities, Nonprofit Research entities,|
+|               and their students, faculty, and staff              |
++-------------------------------------------------------------------+
+
+Type ? for help.  Type <Ctrl>-D to quit.
+Loading "AllBig.txt"
+21552
+0
+103
+*** number of type 2C/6G/6H ****
+[1048    8  840    7]
+*** number of type 2D/6I ****
+[825   1   0   0]
+*** number of type 8A ****
+[377   0 693   6]
+[856   9 161   0]
+[1233    9  854    6]
+*** number of type 10A ****
+[3407   48 2287    4]
+*** number of type 4D ****
+[  0   0 890   2]
+*** number of type 4C/12C ****
+[   0    0 3369   18]
+*** total number ***
+[6513   66 8240   37]
+*** total number without 4C/12C ****
+[6513   66 4871   19]
+14856
+0
+
+Total time: 17.460 seconds, Total memory usage: 92.31MB

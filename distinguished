@@ -1,0 +1,62 @@
+F:=FiniteField(3);
+R<x>:=PolynomialRing(F);
+H<t>:=PolynomialRing(Rationals());
+ordlist:=[];
+modordlist:=[];
+list:=[];
+Z:=Integers();
+dis:=[];
+distinguished:=2*x^2 + 1;
+count:=0;
+
+troll:=[];
+A4:=1 + x + x^2;
+A5:=(3*x^2 + 2*x + 3)^2;
+list:=[];
+power:=0;
+all:=0;
+ordinary:=0;
+for a in [0..2] do
+for b in [0..2] do
+for c in [0..2] do
+for d in [0..2] do
+for e in [0..2] do
+for f in [0..2] do
+for g in [0..2] do
+power:=power+1;
+try
+ C:=HyperellipticCurve(a*x^6 + b*x^5 + c*x^4 + d*x^3 + e*x^2 + f*x + g);
+	catch z;
+        continue;
+end try;
+if Genus(C) eq 2 then
+	all:=all+1;
+	A:=a*t^6 + b*t^5+c*t^4+d*t^3+e*t^2+f*t+g;
+	D:=HyperellipticCurve(A,0);
+	P:=H!EulerFactor(D,3); PR:=R!P;
+	b2:=Z!Coefficient(P,2);
+	if GCD(b2,3) eq 1 then
+		ordinary:=ordinary+1;
+		BB:=AbelianGroup(Jacobian(HyperellipticCurve(R!A)));
+		BBB:=quo<BB|Sylow(BB,2)>;
+		if IsCyclic(BBB) then
+			chicken:=0;
+			else;
+			count:=count+1;
+			BBB;
+			Factorization(P);
+			A;
+			troll:=Append(troll,A);
+			end if;
+                end if;
+	end if;
+end for;
+end for;
+end for;
+end for;
+end for;
+end for;
+end for;
+list;
+count;
+troll;

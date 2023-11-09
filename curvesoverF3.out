@@ -1,0 +1,50 @@
+Magma V2.23-9     Thu Nov  9 2023 09:30:35 on hegel    [Seed = 1248056423]
+
++-------------------------------------------------------------------+
+|       This copy of Magma has been made available through a        |
+|                   generous initiative of the                      |
+|                                                                   |
+|                         Simons Foundation                         |
+|                                                                   |
+| covering U.S. Colleges, Universities, Nonprofit Research entities,|
+|               and their students, faculty, and staff              |
++-------------------------------------------------------------------+
+
+Type ? for help.  Type <Ctrl>-D to quit.
+looped over the following number of curves
+2187
+of whom the following number are smooth
+1296
+of who the following number are ordinary
+864
+of the 40 ordinary Weil polynomials, which ones arise
+36
+of whom the following have Char(Frob)=x^2(x-1)^2 mod 3
+141
+now, for those 141 curves, check that the ones for which
+Jac(X)[3]=(Z/3Z)^2 over F_3, of which there are 5, have
+char poly of Frob_3 a square in char = 0
+x^6 + x^4 + x^2 + 1
+[
+    <t^2 + 2/3*t + 1/3, 2>
+]
+x^6 + x^4 + x^2 + 2
+[
+    <t^2 - 1/3*t + 1/3, 2>
+]
+2*x^6 + x^4 + x^2 + 1
+[
+    <t^2 - 1/3*t + 1/3, 2>
+]
+2*x^6 + x^4 + x^3 + x^2 + 2
+[
+    <t^2 - 1/3*t + 1/3, 2>
+]
+2*x^6 + x^4 + 2*x^3 + x^2 + 2
+[
+    <t^2 - 1/3*t + 1/3, 2>
+]
+141
+5
+
+Total time: 1.439 seconds, Total memory usage: 32.09MB

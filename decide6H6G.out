@@ -1,0 +1,44 @@
+Magma V2.23-9     Thu Nov  9 2023 12:57:30 on hegel    [Seed = 2393292817]
+
++-------------------------------------------------------------------+
+|       This copy of Magma has been made available through a        |
+|                   generous initiative of the                      |
+|                                                                   |
+|                         Simons Foundation                         |
+|                                                                   |
+| covering U.S. Colleges, Universities, Nonprofit Research entities,|
+|               and their students, faculty, and staff              |
++-------------------------------------------------------------------+
+
+Type ? for help.  Type <Ctrl>-D to quit.
+Loading "curves6H6G"
+Loading "divisionpolynomials.m"
+******* now checking ordinary curves for 6G/6H *******
+********
+now considering the curve number:
+1
+Does this curve lift to a Q2 curve with a Weierstrass Point?
+No it does not!
+the conjugacy class 6G or 6H?
+the class is 6G
+********
+now considering the curve number:
+2
+Does this curve lift to a Q2 curve with a Weierstrass Point?
+No it does not!
+the conjugacy class 6G or 6H?
+the class is 6G
+********
+now considering the curve number:
+3
+Does this curve lift to a Q2 curve with a Weierstrass Point?
+No it does not!
+the conjugacy class 6G or 6H?
+the class is 6G
+********
+now considering the curve number:
+4
+Does this curve lift to a Q2 curve with a Weierstrass Point?
+No it does not!
+the conjugacy class 6G or 6H?
+the class is 6G

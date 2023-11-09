@@ -1,0 +1,134 @@
+
+F:=FiniteField(3);
+R<x>:=PolynomialRing(F);
+H<t>:=PolynomialRing(Rationals());
+Z:=Integers();
+
+restricted:=x^2+x+1;
+splitlist:=[];
+power:=0;
+good:=0;
+ordinary:=0;
+biglist:=[];
+ordlist:=[
+    9*t^4 + 2*t^2 + 1,
+    9*t^4 - 2*t^2 + 1,
+    9*t^4 + 9*t^3 + 7*t^2 + 3*t + 1,
+    9*t^4 - 9*t^3 + 7*t^2 - 3*t + 1,
+    9*t^4 - 3*t^3 + 2*t^2 - t + 1,
+    9*t^4 + 6*t^3 + 2*t^2 + 2*t + 1,
+    9*t^4 - 3*t^3 - t^2 - t + 1,
+    9*t^4 + 6*t^3 + 4*t^2 + 2*t + 1,
+    9*t^4 - 3*t^3 + 4*t^2 - t + 1,
+    9*t^4 + 3*t^3 + 2*t^2 + t + 1,
+    9*t^4 + 3*t^3 - t^2 + t + 1,
+    9*t^4 - 6*t^3 + 2*t^2 - 2*t + 1,
+    9*t^4 - 6*t^3 + 4*t^2 - 2*t + 1,
+    9*t^4 + 3*t^3 + 4*t^2 + t + 1,
+    9*t^4 + 9*t^3 + 5*t^2 + 3*t + 1,
+    9*t^4 - 9*t^3 + 5*t^2 - 3*t + 1,
+    9*t^4 + 4*t^2 + 1,
+    9*t^4 - 3*t^3 - 2*t^2 - t + 1,
+    9*t^4 - 3*t^3 + t^2 - t + 1,
+    9*t^4 + 3*t^3 - 2*t^2 + t + 1,
+    9*t^4 + 3*t^3 + t^2 + t + 1,
+    9*t^4 - 3*t^3 + 5*t^2 - t + 1,
+    9*t^4 + 3*t^3 + 5*t^2 + t + 1,
+    9*t^4 + 12*t^3 + 10*t^2 + 4*t + 1,
+    9*t^4 - 6*t^3 + 7*t^2 - 2*t + 1,
+    9*t^4 + 5*t^2 + 1,
+    9*t^4 - 6*t^3 + t^2 - 2*t + 1,
+    9*t^4 - t^2 + 1,
+    9*t^4 + 6*t^3 + 7*t^2 + 2*t + 1,
+    9*t^4 + 6*t^3 + 5*t^2 + 2*t + 1,
+    9*t^4 + t^2 + 1,
+    9*t^4 + 12*t^3 + 8*t^2 + 4*t + 1,
+    9*t^4 - 6*t^3 + 5*t^2 - 2*t + 1,
+    9*t^4 + 6*t^3 + t^2 + 2*t + 1,
+    9*t^4 - 12*t^3 + 10*t^2 - 4*t + 1,
+    9*t^4 - 12*t^3 + 8*t^2 - 4*t + 1
+];
+
+
+for a in [0..2] do
+for b in [0..2] do
+for c in [0..2] do
+for d in [0..2] do
+for e in [0..2] do
+for f in [0..2] do
+for g in [0..2] do
+power:=power+1;
+try
+ C:=HyperellipticCurve(a*x^6 + b*x^5 + c*x^4 + d*x^3 + e*x^2 + f*x + g);
+	catch z;
+        continue;
+end try;
+if Genus(C) eq 2 then
+	good:=good+1;
+	A:=a*t^6 + b*t^5+c*t^4+d*t^3+e*t^2+f*t+g;
+	D:=HyperellipticCurve(A,0); 
+	P:=H!EulerFactor(D,3);
+	b2:=Z!Coefficient(P,2);
+	if GCD(b2,3) eq 1 then
+		ordinary:=ordinary+1;
+		biglist:=Append(biglist,P);
+		end if;
+        PR:=R!EulerFactor(D,3); 
+        if PR eq restricted then
+                splitlist:=Append(splitlist,A);
+                end if;
+	end if;
+end for;
+end for;
+end for;
+end for;
+end for;
+end for;
+end for;
+print("looped over the following number of curves");
+power;
+print("of whom the following number are smooth");
+good;
+print("of who the following number are ordinary");
+ordinary;
+print("of the 40 ordinary Weil polynomials, which ones arise");
+#ordlist;
+print("of whom the following have Char(Frob)=x^2(x-1)^2 mod 3");
+#splitlist;
+print("now, for those 141 curves, check that the ones for which
+Jac(X)[3]=(Z/3Z)^2 over F_3, of which there are 5, have
+char poly of Frob_3 a square in char = 0");
+splitcount:=0;
+for n in [1..#splitlist] do
+A:=R!splitlist[n];
+B:=HyperellipticCurve(splitlist[n],0);
+C:=HyperellipticCurve(A,0);
+AA:=AbelianGroup(Jacobian(C));
+AAA:=Sylow(AA,3);
+if IsCyclic(AAA) then
+	chicken:=0;
+	else;
+	splitcount:=splitcount+1;
+	A;
+	Factorization(H!EulerFactor(B,3));
+	end if;
+end for;
+#splitlist;
+splitcount;
+
+
+
+/* ordlist 
+
+for n in [1..#ordlist] do
+	count:=0;
+	for m in [1..#biglist] do
+		if biglist[m] eq ordlist[n] then
+			count:=count+1;
+			end if;
+		end for;
+	[ordlist[n],count];
+	Factorization(ordlist[n]);
+end for;
+
+*/

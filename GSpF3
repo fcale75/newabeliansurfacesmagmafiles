@@ -1,0 +1,40 @@
+F<x>:=PolynomialRing(FiniteField(3));
+G:=CSp(4,3);
+P,phi:=quo<G|Center(G)>;
+C:=Classes(G);
+ZG:=Subgroups(G);
+S:=ZG[#ZG-1]`subgroup;
+
+M:=Parent(Matrix(F,4,4,[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]));
+
+for n in [1..#C] do
+c:=C[n][3];
+if c in S then
+	chicken:=0;
+	else
+	pc:=phi(c); MC:=M!c; Id:=MC^12;
+	if Order(pc) in [2,6] then
+	print("********");
+	print("c in PGSp_4(F3) has order:");
+	Order(pc);
+	print("char and min polys of c are");
+	F!CharacteristicPolynomial(c);
+	F!MinimalPolynomial(c);
+        print("char and min polys of c^2 are");
+        F!CharacteristicPolynomial(c^2);
+        F!MinimalPolynomial(c^2);
+	print("null space of c^4 - 1 is");
+	Kernel(MC^4 - Id);
+	print("char and min polys of c^3 are");
+	F!CharacteristicPolynomial(c^3);
+	F!MinimalPolynomial(c);
+	print("order of conjugacy class is");
+	N:=Centralizer(P,pc);
+	Index(P,N);
+	end if;
+end if;
+end for;
+
+
+
+

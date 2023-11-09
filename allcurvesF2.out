@@ -1,0 +1,42 @@
+Magma V2.23-9     Thu Nov  9 2023 12:15:38 on hegel    [Seed = 4191272203]
+
++-------------------------------------------------------------------+
+|       This copy of Magma has been made available through a        |
+|                   generous initiative of the                      |
+|                                                                   |
+|                         Simons Foundation                         |
+|                                                                   |
+| covering U.S. Colleges, Universities, Nonprofit Research entities,|
+|               and their students, faculty, and staff              |
++-------------------------------------------------------------------+
+
+Type ? for help.  Type <Ctrl>-D to quit.
+******* looping over y^2 + h(x) y = f(x) with deg(h,f) <= (3,5) over F2, 
+#curves= ****
+1024
+******* the number of curves with good reduction is *****
+384
+******* the number of curves with good ordinary reduction is *****
+192
+******* the number with char poly = (x^4+2x^2+1) mod 3 and 6G/6H is ****
+[48 24 24]
+******* the number with char poly = (x^4+2x^2+1) mod 3 and 2C is ****
+[0 0 0]
+******* the number with char poly = (x^4+x^2+1) mod 3 and 6I is ****
+[24 24  0]
+******* the number with char poly = (x^4+x^2+1) mod 3 and 2D is ****
+[0 0 0]
+******* the number with char poly = (x^4+-x^3+x^2-+x+1) mod 3 and 8I is ****
+[72 48 24]
+******* the number with char poly = (x^4+-x^3-+x+1) mod 3 and 10A is ****
+[144  96  48]
+******* the number with char poly = (x^4+-x^3+2x^2-+x+1) mod 3 and 4C is ****
+[0 0 0]
+******* the number with char poly = (x^4+-x^3+2x^2-+x+1) mod 3 and 12C is ****
+[72  0 72]
+******* the number with char poly = (x^4+1) mod 3 and 4D is ****
+[24  0 24]
+******* the totals ********
+[384 192 192]
+
+Total time: 3.359 seconds, Total memory usage: 32.09MB

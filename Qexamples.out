@@ -1,0 +1,27 @@
+Magma V2.23-9     Fri Jul 14 2023 03:23:18 on hegel    [Seed = 586630021]
+
++-------------------------------------------------------------------+
+|       This copy of Magma has been made available through a        |
+|                   generous initiative of the                      |
+|                                                                   |
+|                         Simons Foundation                         |
+|                                                                   |
+| covering U.S. Colleges, Universities, Nonprofit Research entities,|
+|               and their students, faculty, and staff              |
++-------------------------------------------------------------------+
+
+Type ? for help.  Type <Ctrl>-D to quit.
+249
+975
+1947
+[
+    <x^4 + x^3 + 3/4*x^2 + 1/2*x + 1/4, 1>
+]
+[
+    <x^4 + 1/4*x^2 + 1/4, 1>
+]
+[
+    <x^4 - 1/4*x^2 + 1/4, 1>
+]
+
+Total time: 1.030 seconds, Total memory usage: 32.09MB

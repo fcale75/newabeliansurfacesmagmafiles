@@ -1,0 +1,12 @@
+Q<x>:=PolynomialRing(Rationals());
+C1:=HyperellipticCurve(x^2+x,x^3+1);
+C2:=HyperellipticCurve( - x^5 + x^3 + 2*x^2 + x - 1,x^3 + 1);
+C3:=HyperellipticCurve(x^5 + 2*x^4 + x^3 - 16*x^2 - 8*x - 1,x^2+x);
+
+Conductor(C1);
+Conductor(C2);
+Conductor(C3);
+
+Factorization(Q!EulerFactor(C1,2));
+Factorization(Q!EulerFactor(C2,2));
+Factorization(Q!EulerFactor(C3,2));

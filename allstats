@@ -1,0 +1,150 @@
+R<x>:=PolynomialRing(Rationals());
+Q:=Rationals();
+load "AllBig.txt";
+
+Z:=Integers();
+FF<y>:=PolynomialRing(FiniteField(3));
+
+Z2<u>:=PolynomialRing(pAdicRing(2,200));
+degs := function(F);
+R:=Factorization(Z2!F);
+vect:=1;
+for r in [1..#R] do;
+    vect:=vect * Degree(R[r][1]);
+    end for;
+return vect;
+end function;
+
+
+repeatedroots := function(F);
+ans:=0;
+R:=Factorization(F);
+vect:=[];
+for r in [1..#R] do;
+ 	if R[r][2] ge 2 then
+	ans:=ans+1;
+	end if;
+end for;
+return ans; 
+end function;
+
+/* 2C,6H,6H */
+chi1:=y^4 + 2*y^2 + 1;
+/* 2D, 6I */
+chi2:=y^4 + y^2 + 1;
+/* 8A */
+chi3:=y^4 + y^3 + y^2 + 2*y + 1;
+/* 8A */
+chi4:=y^4 + 2*y^3 + y^2 + y + 1;
+/* 10A */
+chi5:=y^4 + y^3 + 2*y + 1;
+/* 10A */
+chi6:=y^4 + 2*y^3 + y + 1;
+/* 4D */
+chi7:=y^4+1;
+/* 4C, 12C */
+chi8:=y^4 + y^3 + 2*y^2 + 2*y +1;
+chi9:=y^4 +2*y^3+2*y^2 + y + 1;
+
+mm:=Matrix(Q,1,4,[0,0,0,0]);;
+c1:=mm; c2:=mm; c3:=mm; c4:=mm; c5:=mm; c6:=mm;
+c7:=mm; c8:=mm; c9:=mm;
+
+missing:=0;
+
+#data;
+count:=0;
+rep:=0;
+threeord:=0;
+list:=[];
+for i in [1..#data] do
+m:=data[i];
+a:=m[1];
+b:=m[2];
+A:=&+[a[i]*x^(i-1) : i in [1..#a]];
+B:=&+[b[i]*x^(i-1) : i in [1..#b]];
+FFF:=4*A + B^2;
+C:=HyperellipticCurve(A,B);
+P2:=R!EulerFactor(C,2);
+b2:=Z!Coefficient(P2,2);
+P3:=R!EulerFactor(C,3);
+b3:=Z!Coefficient(P3,2);
+w:=0;
+if GCD(b3,3) eq 1 then
+	threeord:=threeord+1;
+	if GCD(b2,2) eq 1 then
+		ord:=1;
+		else
+		ord:=0;
+		end if;
+	if repeatedroots(P3) eq 1 then
+		rep:=rep+1;
+		w:=1;
+		end if;	
+	P2mod:=FF!P2;
+	test:=0;
+	if P2mod eq chi1 then
+	c1:=c1 + Matrix(Q,1,4,[ord*(1-w),ord*w,(1-ord)*(1-w),(1-ord)*w]);
+	test:=test+1;
+		end if;
+        if P2mod eq chi2 then
+        c2:=c2 + Matrix(Q,1,4,[ord*(1-w),ord*w,(1-ord)*(1-w),(1-ord)*w]);
+	      test:=test+1;
+                end if;
+        if P2mod eq chi3 then
+        c3:=c3 + Matrix(Q,1,4,[ord*(1-w),ord*w,(1-ord)*(1-w),(1-ord)*w]);
+	      test:=test+1;
+                end if;
+        if P2mod eq chi4 then
+        c4:=c4 + Matrix(Q,1,4,[ord*(1-w),ord*w,(1-ord)*(1-w),(1-ord)*w]);
+	      test:=test+1;
+                end if;
+        if P2mod eq chi5 then
+        c5:=c5 + Matrix(Q,1,4,[ord*(1-w),ord*w,(1-ord)*(1-w),(1-ord)*w]);
+	      test:=test+1;
+                end if;
+        if P2mod eq chi6 then
+        c6:=c6 + Matrix(Q,1,4,[ord*(1-w),ord*w,(1-ord)*(1-w),(1-ord)*w]);
+	      test:=test+1;
+                end if;
+        if P2mod eq chi7 then
+        c7:=c7 + Matrix(Q,1,4,[ord*(1-w),ord*w,(1-ord)*(1-w),(1-ord)*w]);
+	      test:=test+1;
+                end if;
+        if P2mod eq chi8 then
+        c8:=c8 + Matrix(Q,1,4,[ord*(1-w),ord*w,(1-ord)*(1-w),(1-ord)*w]);
+	      test:=test+1;
+                end if;
+        if P2mod eq chi9 then
+        c9:=c9 + Matrix(Q,1,4,[ord*(1-w),ord*w,(1-ord)*(1-w),(1-ord)*w]);
+	      test:=test+1;
+                end if;
+	if test eq 0 then
+		missing:=missing+1;
+		end if;
+	end if;
+	if c3[1,1]+c3[1,2]+c3[1,3]+c3[1,4]+c4[1,1]+c4[1,2]+c4[1,3]+c4[1,4] eq 1 then
+	end if;
+end for;
+count;
+rep;
+print("*** number of type 2C/6G/6H ****");
+c1;
+print("*** number of type 2D/6I ****");
+c2;
+print("*** number of type 8A ****");
+c3;
+c4;
+c3+c4;
+print("*** number of type 10A ****");
+c5+c6;
+print("*** number of type 4D ****");
+c7;
+print("*** number of type 4C/12C ****");
+c8+c9;
+print("*** total number ***");
+c1+c2+c3+c4+c5+c6+c7+c8+c9;
+print("*** total number without 4C/12C ****");
+c1+c2+c3+c4+c5+c6+c7;
+threeord;
+missing;

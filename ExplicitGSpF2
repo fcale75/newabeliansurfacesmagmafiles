@@ -1,0 +1,44 @@
+/* I've done this explicitly too many times, so coding it up.
+Warning! permutation reps in magma are the wrong way
+Warning! matrices in magma are also confusing because they also
+act in the wrong way, but because the image is self-dual it's not quite
+as wrong as you think. So the fix is to define the map sending elements
+to the inverse of what you expect. */
+
+G<a,b,c>:=PermutationGroup<6|(1,2)(3,4)(5,6),(1,2),(1,2,3,4,5)>;
+Sp:=CSp(4,2);
+F:=FiniteField(2);
+aa:=Sp!Matrix(F,4,4,[1,0,1,0,0,1,0,1,0,0,1,0,0,0,0,1]);
+bb:=Sp!Matrix(F,4,4,[1,0,0,1,0,1,0,0,0,0,1,0,0,0,0,1]);
+cc:=Sp!Matrix(F,4,4,[0,0,1,1,1,1,0,0,1,1,1,0,1,0,1,1]);
+dd:=Sp!Matrix(F,4,4,[1,1,0,0,0,1,0,0,0,0,1,1,0,0,0,1]);
+phi:=hom<G->Sp|aa^-1,bb^-1,cc^-1>;
+S5b:=sub<Sp | phi(b), phi(c)>;
+print("G is the group S6 as follows");
+G;
+print("G has order");
+Order(G);
+Z:=Subgroups(Sp);
+A6:=Z[#Z-1]`subgroup;
+A5b:=A6 meet S5b;
+print("we have a group S5, check it is S5b by checking
+that the restriction to A5 is absolutely irreducible");
+/* check it's the correct S5 */
+Order(A5b);
+IsAbsolutelyIrreducible(GModule(A5b));
+
+print("check the order 6 element (***)(**) has char poly (x-1)^2(x^2+x+1)");
+
+/* check the order 6 element (***)(**) has char (x-1)^2(x^2+x+1) */
+CC:=Classes(S5b);
+F<x>:=PolynomialRing(GF(2));
+Factorization(F!CharacteristicPolynomial(CC[7][3]));
+
+print("the elements a,b,c and their images");
+a;
+phi(a);
+b;
+phi(b);
+c;
+phi(c);
+
