@@ -18,7 +18,7 @@ threedivpol := torspoly_part1(Rationals(), atoe) + torspoly_part2(Rationals(), a
 return threedivpol;
 end function;
 
-Z2<y>:=PolynomialRing(pAdicRing(2,2000));
+Z2<y>:=PolynomialRing(pAdicRing(2,20000));
 
 degs := function(F);
 R:=Factorization(Z2!F);
