@@ -8,7 +8,7 @@ XG:=CharacterTable(G);
 
 /* the element (-1,-1,-1,-1) */
 c:=Center(G).1;
-
+P,pi:=quo<G|sub<G|c>>;
 
 /* the function isregular determines if g is a regular elment or not */
 
@@ -23,21 +23,60 @@ for m in [1..#Q] do
 return 1-count;
 end function;
 
-print("list the conjugacy classes and orders of regular semisimple elements in Sp4(F3) up to conjugation in GSp_4(F3)");
+print("list the conjugacy classes and orders of regular semisimple elements in GSp4(F3) up to conjugation in GSp_4(F3); first come the classes and the orders (can ignore), then explicit representatives");
 
+print("the conjugacy classes of GSp4(F3), with [v(g),label,order(g),order(g in PSGp_4(F3))]");
+for n in [1..#C] do
+g:=C[n][3];
+if g in S then
+	[1,n,Order(g),Order(pi(g))];
+	end if;
+if g notin S then
+	[-1,n,Order(g),Order(pi(g))];
+	end if;
+end for;
+
+print("*********");
+print("the subset of the above which are regular semisimple");
 regularsemisimple:=[];
+regularsemisimpleG:=[];
 for n in [1..#C] do
 g:=C[n][3];
 P:=F!CharacteristicPolynomial(g);
 if g in S then
 	if GCD(Order(g),3) eq 1 then
 		if isregular(P) eq 1 then
-			[n,Order(g)];
+			[1,n,Order(g)];
 			regularsemisimple:=Append(regularsemisimple,g);	
 			end if;
 		end if;
 	end if;
+if g notin S then
+	if GCD(Order(g),3) eq 1 then
+		if isregular(P) eq 1 then
+			[-1,n,Order(g)];
+			regularsemisimpleG:=Append(regularsemisimpleG,g);	
+			end if;
+		end if;
+	end if;
 end for;
+
+print("the classes and orders in Sp4");
+for g in regularsemisimple do
+	g;
+	print("with order");
+	Order(g);
+end for;
+
+print("the classes and orders in GSp4 minus Sp4");
+for g in regularsemisimpleG do
+        g;
+        print("with order");
+        Order(g);
+end for;
+
+
+
 
 /* The following counts the number of elements in a group Gamma 
 which are tidy. The only allowable possibility is that v(g) = -1. 
@@ -79,11 +118,23 @@ for m in [1..3] do
 		end for;
 	end for;
 
+/* BARS is the list of regular semisimple elements in GSp_4(F_3) \ Sp_4(F_3)  */
+
+BARS:=[];
+for m in [1..5] do
+	T:=Conjugates(G,regularsemisimpleG[m]);
+	for n in [1..#T] do
+		BARS:=Append(BARS,T[n]);
+		end for;
+	end for;
+
+
 /* the list ARS should be the union of three conjugacy classes so their orders
 and thus the next two numbers should coincide */
 
 C[12][2] + C[24][2] + C[28][2];
 #ARS;
+#BARS;
 
 /* reproduce Whitmore's table but now with regular-semisimple elements and ignoring
 H^1(Gamma,F_3) */
@@ -91,7 +142,7 @@ H^1(Gamma,F_3) */
 good:=0;
 
 print("reproducing Whitmore's table plus more, 1 means is good");
-print("[Gamma', Gamma, reasonable, tidy, regular semisimple]");
+print("[Gamma', Gamma, reasonable, tidy, regular semisimple in Sp4, regular semisimple in GSp4 minus Sp4]");
 
 for n in [3..#ZG] do
 P:=ZG[n]`subgroup;
@@ -101,17 +152,22 @@ if IsAbsolutelyIrreducible(N) then
 sp:=SymmetricSquare(N);
 CM:=CohomologyModule(P meet S,sp);
 if Index(P,P meet S) eq 2 then
-	count:=0;
+	count:=0; countG:=0;
 	for g in P do
 		if count eq 0 then
 			if g in ARS then
 				count:=count+1;
 				end if;
 			end if;
+		if countG eq 0 then
+			if g in BARS then
+				countG:=countG+1;
+				end if;
+			end if;
 		end for;
-/*  [n,Order(P),Order(P meet S),Dimension(CohomologyGroup(CM,1)),tidycount(P),count]; */
-	[Order(P),Order(P meet S),1-Dimension(CohomologyGroup(CM,1)),tidycount(P),count];
-	if ((1-Dimension(CohomologyGroup(CM,1)))*tidycount(P)*count) eq 1 then
+/*  [n,Order(P),Order(P meet S),Dimension(CohomologyGroup(CM,1)),tidycount(P),count,countG]; */
+	[Order(P),Order(P meet S),1-Dimension(CohomologyGroup(CM,1)),tidycount(P),count,countG];
+	if ((1-Dimension(CohomologyGroup(CM,1)))*tidycount(P)*count*countG) eq 1 then
 		good:=good+1;
 		end if;
 if Order(P) le 2000 then
@@ -126,9 +182,3 @@ end for;
 
 print("***the number of groups satisfying all properties is***");
 good;
-	
-
-
-
-
-
