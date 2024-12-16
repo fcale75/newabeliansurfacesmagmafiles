@@ -9,8 +9,16 @@ g2d:=0;
 g6i:=0;
 counth:=0;
 counti:=0;
+g2css:=0;
+g6hss:=0;
+g2dss:=0;
+g6iss:=0;
+counthss:=0;
+countiss:=0;
 typeH:=[];
+typeHss:=[];
 longtypeH:=[];
+longtypeHss:=[];
 threetorsion:=[];
 Z:=Integers();
 restrictH:=[z^4 + 2*z^2+1];
@@ -18,6 +26,7 @@ restrictI:=[z^4 + z^2+1];
 power:=0;
 all:=0;
 ordinary:=0;
+for a in [0..1] do
 for b in [0..1] do
 for c in [0..1] do
 for d in [0..1] do
@@ -30,13 +39,13 @@ for j in [0..1] do
 for k in [0..1] do
 power:=power+1;
 try
- C:=HyperellipticCurve(b*x^5 + c*x^4 + d*x^3 + e*x^2 + f*x + g, h*x^3 + i*x^2 + j*x + k);
+ C:=HyperellipticCurve(a*x^6 + b*x^5 + c*x^4 + d*x^3 + e*x^2 + f*x + g, h*x^3 + i*x^2 + j*x + k);
 	catch z;
         continue;
 end try;
 if Genus(C) eq 2 then
 	all:=all+1;
-	A:=b*t^5+c*t^4+d*t^3+e*t^2+f*t+g;
+	A:=a*t^6 + b*t^5+c*t^4+d*t^3+e*t^2+f*t+g;
 	B:=h*t^3+i*t^2 + j*t + k;
 	D:=HyperellipticCurve(A,B);
 	P:=H!EulerFactor(D,2); P3:=FF!EulerFactor(D,2); 
@@ -63,6 +72,28 @@ if Genus(C) eq 2 then
                         if AAAA eq G2 then g6i:=g6i+1; end if;
                         end if;
                 end if;
+        if GCD(b2,2) eq 2 then
+                if P3 in restrictH then
+                        typeHss:=Append(typeHss,[4*A+(2*t^3 + B)^2]);
+                        longtypeHss:=Append(longtypeHss,[A,B]);
+                        counthss:=counthss+1;
+                        C:=HyperellipticCurve(F!A,F!B);
+                        AA:=AbelianGroup(Jacobian(C));
+                        AAA:=Sylow(AA,3);
+                        AAAA:=IdentifyGroup(AAA);
+                        if AAAA eq G1 then g2css:=g2css+1; end if;
+                        if AAAA eq G2 then g6hss:=g6hss+1; end if;
+                        end if;
+               if P3 in restrictI then
+                        countiss:=countiss+1;
+                        C:=HyperellipticCurve(F!A,F!B);
+                        AA:=AbelianGroup(Jacobian(C));
+                        AAA:=Sylow(AA,3);
+                        AAAA:=IdentifyGroup(AAA);
+                        if AAAA eq G1 then g2dss:=g2dss+1; end if;
+                        if AAAA eq G2 then g6iss:=g6iss+1; end if;
+                        end if;
+                end if;
 	end if;
 end for;
 end for;
@@ -74,29 +105,44 @@ end for;
 end for;
 end for;
 end for;
-print("****** the 24 curves of type 2C/2G/2H are ******");
-counth;
-print("******* Given the 24 X/F_2 smooth ordinary with charpoly(rho_{3}(Frob_2)) of type 2C/6G/6H  ****");
+end for;
+print("****** the ordinary/non-ordinary curves of type 2C/2G/2H are ******");
+[counth,counthss];
+print("******* Given X/F_2 ordinary/non-ordinary with charpoly(rho_{3}(Frob_2)) of type 2C/6G/6H  ****");
 print("******* the possible Jac(F4)[3^oo] are ******");
 print(" the trivial group occurs this many times: ");
-g2c;
+[g2c,g2css];
 print(" the group (Z/3Z)^2 occurs this many times: ");
-g6h;
-print("******* Given the 24 X/F_2 smooth ordinary with charpoly(rho_{3}(Frob_2)) of type 2D/6I  ****");
-counti;
+[g6h,g6hss];
+print("******* Given the X/F_2 ordinary/non-ordinary with charpoly(rho_{3}(Frob_2)) of type 2D/6I  ****");
+[counti,countiss];
 print("******* the possible Jac(F4)[3^oo] are ******");
 print(" the trivial group occurs this many times: ");
-g2d;
+[g2d,g2dss];
 print(" the group (Z/3Z)^2 occurs this many times: ");
-g6i;
+[g6i,g6iss];
 
-/* commented out
+
+
 print("finally, print out the list of curves of type 6G/6H for further
-processing to distinguish 6G and 6H");
+processing to distinguish 6G and 6H; ordinary case");
+print("the number of curves is");
+#typeH;
 for n in [1..#typeH] do
 P:=typeH[n][1];
 C:=HyperellipticCurve(P);
 P;
 end for;
 longtypeH;
-*/
+
+
+print("finally, print out the list of curves of type 6G/6H for further
+processing to distinguish 6G and 6H; non-ordinary case");
+print("the number of curves is");
+#typeHss;
+for n in [1..#typeHss] do
+P:=typeHss[n][1];
+C:=HyperellipticCurve(P);
+P;
+end for;
+longtypeHss;

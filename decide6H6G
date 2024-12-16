@@ -33,7 +33,8 @@ sixG:=Sort([ 1, 1, 1, 2, 2, 2, 3, 3, 3, 3, 6 ]);
 sixH:=Sort([ 3, 3, 3, 6, 6, 3, 3 ]);
 
 print("******* now checking ordinary curves for 6G/6H *******");
-for n in [1..24] do
+print("******* char poly at 2 assumed to be x^2(x^2+1) mod 2 ********");
+for n in [1..16] do
 F:=v[n];
 	Q:=poly(F);
 	W:=&+[Coefficient(Q,2*k)*t^k : k in [0..40]];
@@ -81,9 +82,59 @@ F:=v[n];
 		end if;
 	end for;
 
+print("******* now checking ordinary curves for 6G/6H *******");
+print("******* char poly at 2 assumed to be x^2(x^2+x+1) mod 2 ********");
+for n in [1..32] do
+F:=va[n];
+        Q:=poly(F);
+        W:=&+[Coefficient(Q,2*k)*t^k : k in [0..40]];
+        G,r,S:=GaloisGroup(W);
+        Z:=Subgroups(G:IndexEqual:=27,IsTransitive:=true);
+        if #Z ge 1 then
+                H:=Z[1]`subgroup;
+                T:=GaloisSubgroup(S,H);
+                print("********");
+                print("now considering the curve number:");
+                n;
+                QQ:=degs(va[n]);
+                WP:=1;
+                if QQ[1] eq 6 then
+                        WP:=0;
+                        end if;
+                if #QQ eq 2 then
+                        if QQ[1]*QQ[2] eq 9 then
+                                WP:=0;
+                                end if;
+                        end if;
+                print("Does this curve lift to a Q2 curve with a Weierstrass Point?");
+                if WP eq 1 then
+                        print("Yes it does!");
+                        end if;
+                if WP eq 0 then
+                        print("No it does not!");
+                        end if;
+                print("the conjugacy class 6G or 6H?");
+                poppy:=0;
+                DDD:=degs(T);
+                if Sort(DDD) eq sixH then
+                        print("the class is 6H");
+                        poppy:=1;
+                        end if;
+                if Sort(DDD) eq sixG then
+                        print("the class is 6G");
+                        poppy:=1;
+                        end if;
+                if poppy eq 0 then
+                        print("something went wrong");
+                        end if;
+                else
+                [n,Order(G)];
+                end if;
+        end for;
+
 print("******* now checking non-ordinary curves for 6G/6H *******");
 
-for n in [1..24] do
+for n in [1..48] do
 F:=vv[n];
         Q:=poly(F);
         W:=&+[Coefficient(Q,2*k)*t^k : k in [0..40]];

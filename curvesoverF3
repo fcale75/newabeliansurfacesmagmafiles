@@ -118,7 +118,6 @@ splitcount;
 
 
 
-/* ordlist 
 
 for n in [1..#ordlist] do
 	count:=0;
@@ -131,4 +130,3 @@ for n in [1..#ordlist] do
 	Factorization(ordlist[n]);
 end for;
 
-*/

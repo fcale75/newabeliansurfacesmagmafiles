@@ -8,7 +8,7 @@ XG:=CharacterTable(G);
 
 /* the element (-1,-1,-1,-1) */
 c:=Center(G).1;
-P,pi:=quo<G|sub<G|c>>;
+
 
 /* the function isregular determines if g is a regular elment or not */
 
@@ -25,19 +25,6 @@ end function;
 
 print("list the conjugacy classes and orders of regular semisimple elements in GSp4(F3) up to conjugation in GSp_4(F3); first come the classes and the orders (can ignore), then explicit representatives");
 
-print("the conjugacy classes of GSp4(F3), with [v(g),label,order(g),order(g in PSGp_4(F3))]");
-for n in [1..#C] do
-g:=C[n][3];
-if g in S then
-	[1,n,Order(g),Order(pi(g))];
-	end if;
-if g notin S then
-	[-1,n,Order(g),Order(pi(g))];
-	end if;
-end for;
-
-print("*********");
-print("the subset of the above which are regular semisimple");
 regularsemisimple:=[];
 regularsemisimpleG:=[];
 for n in [1..#C] do
@@ -46,7 +33,7 @@ P:=F!CharacteristicPolynomial(g);
 if g in S then
 	if GCD(Order(g),3) eq 1 then
 		if isregular(P) eq 1 then
-			[1,n,Order(g)];
+			[n,Order(g)];
 			regularsemisimple:=Append(regularsemisimple,g);	
 			end if;
 		end if;
@@ -54,7 +41,7 @@ if g in S then
 if g notin S then
 	if GCD(Order(g),3) eq 1 then
 		if isregular(P) eq 1 then
-			[-1,n,Order(g)];
+			[n,Order(g)];
 			regularsemisimpleG:=Append(regularsemisimpleG,g);	
 			end if;
 		end if;

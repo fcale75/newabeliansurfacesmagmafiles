@@ -1,4 +1,4 @@
-Magma V2.23-9     Thu Nov  9 2023 13:56:07 on hegel    [Seed = 2102731051]
+Magma V2.23-9     Tue Dec 10 2024 21:32:48 on hegel    [Seed = 221474216]
 
 +-------------------------------------------------------------------+
 |       This copy of Magma has been made available through a        |
@@ -14,6 +14,121 @@ Type ? for help.  Type <Ctrl>-D to quit.
 Loading "curves6H6G"
 Loading "divisionpolynomials.m"
 ******* now checking ordinary curves for 6G/6H *******
+******* char poly at 2 assumed to be x^2(x^2+1) mod 2 ********
+********
+now considering the curve number:
+1
+Does this curve lift to a Q2 curve with a Weierstrass Point?
+Yes it does!
+the conjugacy class 6G or 6H?
+the class is 6H
+********
+now considering the curve number:
+2
+Does this curve lift to a Q2 curve with a Weierstrass Point?
+Yes it does!
+the conjugacy class 6G or 6H?
+the class is 6H
+********
+now considering the curve number:
+3
+Does this curve lift to a Q2 curve with a Weierstrass Point?
+Yes it does!
+the conjugacy class 6G or 6H?
+the class is 6H
+********
+now considering the curve number:
+4
+Does this curve lift to a Q2 curve with a Weierstrass Point?
+Yes it does!
+the conjugacy class 6G or 6H?
+the class is 6H
+********
+now considering the curve number:
+5
+Does this curve lift to a Q2 curve with a Weierstrass Point?
+Yes it does!
+the conjugacy class 6G or 6H?
+the class is 6H
+********
+now considering the curve number:
+6
+Does this curve lift to a Q2 curve with a Weierstrass Point?
+Yes it does!
+the conjugacy class 6G or 6H?
+the class is 6H
+********
+now considering the curve number:
+7
+Does this curve lift to a Q2 curve with a Weierstrass Point?
+Yes it does!
+the conjugacy class 6G or 6H?
+the class is 6H
+********
+now considering the curve number:
+8
+Does this curve lift to a Q2 curve with a Weierstrass Point?
+Yes it does!
+the conjugacy class 6G or 6H?
+the class is 6H
+********
+now considering the curve number:
+9
+Does this curve lift to a Q2 curve with a Weierstrass Point?
+Yes it does!
+the conjugacy class 6G or 6H?
+the class is 6H
+********
+now considering the curve number:
+10
+Does this curve lift to a Q2 curve with a Weierstrass Point?
+Yes it does!
+the conjugacy class 6G or 6H?
+the class is 6H
+********
+now considering the curve number:
+11
+Does this curve lift to a Q2 curve with a Weierstrass Point?
+Yes it does!
+the conjugacy class 6G or 6H?
+the class is 6H
+********
+now considering the curve number:
+12
+Does this curve lift to a Q2 curve with a Weierstrass Point?
+Yes it does!
+the conjugacy class 6G or 6H?
+the class is 6H
+********
+now considering the curve number:
+13
+Does this curve lift to a Q2 curve with a Weierstrass Point?
+Yes it does!
+the conjugacy class 6G or 6H?
+the class is 6H
+********
+now considering the curve number:
+14
+Does this curve lift to a Q2 curve with a Weierstrass Point?
+Yes it does!
+the conjugacy class 6G or 6H?
+the class is 6H
+********
+now considering the curve number:
+15
+Does this curve lift to a Q2 curve with a Weierstrass Point?
+Yes it does!
+the conjugacy class 6G or 6H?
+the class is 6H
+********
+now considering the curve number:
+16
+Does this curve lift to a Q2 curve with a Weierstrass Point?
+Yes it does!
+the conjugacy class 6G or 6H?
+the class is 6H
+******* now checking ordinary curves for 6G/6H *******
+******* char poly at 2 assumed to be x^2(x^2+x+1) mod 2 ********
 ********
 now considering the curve number:
 1
@@ -74,9 +189,9 @@ the class is 6G
 now considering the curve number:
 9
 Does this curve lift to a Q2 curve with a Weierstrass Point?
-Yes it does!
+No it does not!
 the conjugacy class 6G or 6H?
-the class is 6H
+the class is 6G
 ********
 now considering the curve number:
 10
@@ -95,9 +210,9 @@ the class is 6G
 now considering the curve number:
 12
 Does this curve lift to a Q2 curve with a Weierstrass Point?
-Yes it does!
+No it does not!
 the conjugacy class 6G or 6H?
-the class is 6H
+the class is 6G
 ********
 now considering the curve number:
 13
@@ -109,16 +224,16 @@ the class is 6G
 now considering the curve number:
 14
 Does this curve lift to a Q2 curve with a Weierstrass Point?
-Yes it does!
+No it does not!
 the conjugacy class 6G or 6H?
-the class is 6H
+the class is 6G
 ********
 now considering the curve number:
 15
 Does this curve lift to a Q2 curve with a Weierstrass Point?
-Yes it does!
+No it does not!
 the conjugacy class 6G or 6H?
-the class is 6H
+the class is 6G
 ********
 now considering the curve number:
 16
@@ -144,23 +259,23 @@ the class is 6G
 now considering the curve number:
 19
 Does this curve lift to a Q2 curve with a Weierstrass Point?
-Yes it does!
+No it does not!
 the conjugacy class 6G or 6H?
-the class is 6H
+the class is 6G
 ********
 now considering the curve number:
 20
 Does this curve lift to a Q2 curve with a Weierstrass Point?
-Yes it does!
+No it does not!
 the conjugacy class 6G or 6H?
-the class is 6H
+the class is 6G
 ********
 now considering the curve number:
 21
 Does this curve lift to a Q2 curve with a Weierstrass Point?
-Yes it does!
+No it does not!
 the conjugacy class 6G or 6H?
-the class is 6H
+the class is 6G
 ********
 now considering the curve number:
 22
@@ -179,9 +294,65 @@ the class is 6G
 now considering the curve number:
 24
 Does this curve lift to a Q2 curve with a Weierstrass Point?
-Yes it does!
+No it does not!
 the conjugacy class 6G or 6H?
-the class is 6H
+the class is 6G
+********
+now considering the curve number:
+25
+Does this curve lift to a Q2 curve with a Weierstrass Point?
+No it does not!
+the conjugacy class 6G or 6H?
+the class is 6G
+********
+now considering the curve number:
+26
+Does this curve lift to a Q2 curve with a Weierstrass Point?
+No it does not!
+the conjugacy class 6G or 6H?
+the class is 6G
+********
+now considering the curve number:
+27
+Does this curve lift to a Q2 curve with a Weierstrass Point?
+No it does not!
+the conjugacy class 6G or 6H?
+the class is 6G
+********
+now considering the curve number:
+28
+Does this curve lift to a Q2 curve with a Weierstrass Point?
+No it does not!
+the conjugacy class 6G or 6H?
+the class is 6G
+********
+now considering the curve number:
+29
+Does this curve lift to a Q2 curve with a Weierstrass Point?
+No it does not!
+the conjugacy class 6G or 6H?
+the class is 6G
+********
+now considering the curve number:
+30
+Does this curve lift to a Q2 curve with a Weierstrass Point?
+No it does not!
+the conjugacy class 6G or 6H?
+the class is 6G
+********
+now considering the curve number:
+31
+Does this curve lift to a Q2 curve with a Weierstrass Point?
+No it does not!
+the conjugacy class 6G or 6H?
+the class is 6G
+********
+now considering the curve number:
+32
+Does this curve lift to a Q2 curve with a Weierstrass Point?
+No it does not!
+the conjugacy class 6G or 6H?
+the class is 6G
 ******* now checking non-ordinary curves for 6G/6H *******
 ********
 now considering the curve number:
@@ -303,5 +474,125 @@ now considering the curve number:
 24
 is the conjugacy class 6G or 6H?
 the class is 6G
+********
+now considering the curve number:
+25
+is the conjugacy class 6G or 6H?
+the class is 6G
+********
+now considering the curve number:
+26
+is the conjugacy class 6G or 6H?
+the class is 6G
+********
+now considering the curve number:
+27
+is the conjugacy class 6G or 6H?
+the class is 6G
+********
+now considering the curve number:
+28
+is the conjugacy class 6G or 6H?
+the class is 6G
+********
+now considering the curve number:
+29
+is the conjugacy class 6G or 6H?
+the class is 6G
+********
+now considering the curve number:
+30
+is the conjugacy class 6G or 6H?
+the class is 6G
+********
+now considering the curve number:
+31
+is the conjugacy class 6G or 6H?
+the class is 6G
+********
+now considering the curve number:
+32
+is the conjugacy class 6G or 6H?
+the class is 6G
+********
+now considering the curve number:
+33
+is the conjugacy class 6G or 6H?
+the class is 6G
+********
+now considering the curve number:
+34
+is the conjugacy class 6G or 6H?
+the class is 6G
+********
+now considering the curve number:
+35
+is the conjugacy class 6G or 6H?
+the class is 6G
+********
+now considering the curve number:
+36
+is the conjugacy class 6G or 6H?
+the class is 6G
+********
+now considering the curve number:
+37
+is the conjugacy class 6G or 6H?
+the class is 6G
+********
+now considering the curve number:
+38
+is the conjugacy class 6G or 6H?
+the class is 6G
+********
+now considering the curve number:
+39
+is the conjugacy class 6G or 6H?
+the class is 6G
+********
+now considering the curve number:
+40
+is the conjugacy class 6G or 6H?
+the class is 6G
+********
+now considering the curve number:
+41
+is the conjugacy class 6G or 6H?
+the class is 6G
+********
+now considering the curve number:
+42
+is the conjugacy class 6G or 6H?
+the class is 6G
+********
+now considering the curve number:
+43
+is the conjugacy class 6G or 6H?
+the class is 6G
+********
+now considering the curve number:
+44
+is the conjugacy class 6G or 6H?
+the class is 6G
+********
+now considering the curve number:
+45
+is the conjugacy class 6G or 6H?
+the class is 6G
+********
+now considering the curve number:
+46
+is the conjugacy class 6G or 6H?
+the class is 6G
+********
+now considering the curve number:
+47
+is the conjugacy class 6G or 6H?
+the class is 6G
+********
+now considering the curve number:
+48
+is the conjugacy class 6G or 6H?
+the class is 6G
 
-Total time: 12785.219 seconds, Total memory usage: 343.31MB
+Total time: 17024.060 seconds, Total memory usage: 316.53MB
