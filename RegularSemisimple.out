@@ -1,4 +1,4 @@
-Magma V2.23-9     Mon Aug  5 2024 09:37:29 on hegel    [Seed = 904114400]
+Magma V2.23-9     Sun Feb 23 2025 09:42:26 on hegel    [Seed = 348664500]
 
 +-------------------------------------------------------------------+
 |       This copy of Magma has been made available through a        |
@@ -118,76 +118,126 @@ with order
 16848
 26568
 reproducing Whitmore's table plus more, 1 means is good
+second line is the LMFDB label of the subgroup
 [Gamma', Gamma, reasonable, tidy, regular semisimple in Sp4, regular semisimple 
 in GSp4 minus Sp4]
 [ 80, 40, 1, 1, 1, 1 ]
 <80, 29>
 <40, 3>
+the group label is
+3.1296.1
 [ 64, 32, 1, 1, 0, 1 ]
 <64, 258>
 <32, 50>
+the group label is
+3.1620.2
 [ 64, 32, 1, 1, 1, 1 ]
 <64, 258>
 <32, 44>
+the group label is
+3.1620.1
 [ 64, 32, 1, 1, 1, 1 ]
 <64, 152>
 <32, 8>
+the group label is
+3.1620.10
 [ 64, 32, 1, 1, 1, 1 ]
 <64, 152>
 <32, 44>
+the group label is
+3.1620.5
 [ 128, 64, 1, 0, 1, 1 ]
 <128, 137>
 <64, 37>
+the group label is
+3.810.5
 [ 128, 64, 1, 1, 1, 1 ]
 <128, 142>
 <64, 37>
+the group label is
+3.810.6
 [ 128, 64, 1, 1, 1, 1 ]
 <128, 2023>
 <64, 137>
+the group label is
+3.810.2
 [ 128, 64, 1, 0, 1, 1 ]
 <128, 137>
 <64, 137>
+the group label is
+3.810.1
 [ 192, 96, 0, 1, 1, 1 ]
 <192, 1483>
 <96, 191>
+the group label is
+3.540.2
 [ 192, 96, 1, 1, 0, 1 ]
 <192, 1485>
 <96, 202>
+the group label is
+3.540.3
 [ 192, 96, 0, 1, 1, 1 ]
 <192, 965>
 <96, 191>
+the group label is
+3.540.7
 [ 192, 96, 1, 1, 0, 1 ]
 <192, 1018>
 <96, 202>
+the group label is
+3.540.5
 [ 192, 96, 1, 1, 1, 1 ]
 <192, 1485>
 <96, 190>
+the group label is
+3.540.1
 [ 480, 240, 0, 1, 1, 1 ]
 <480, 947>
 <240, 89>
+the group label is
+3.216.2
 [ 480, 240, 1, 1, 1, 1 ]
 <480, 948>
 <240, 90>
+the group label is
+3.216.1
 [ 256, 128, 1, 1, 1, 1 ]
 <256, 6671>
 <128, 937>
+the group label is
+3.405.1
 [ 384, 192, 1, 1, 1, 1 ]
 <384, 18045>
 <192, 989>
+the group label is
+3.270.1
 [ 640, 320, 1, 0, 1, 1 ]
 <640, 21454>
 <320, 1581>
+the group label is
+3.162.1
 [ 768, 384, 1, 1, 1, 1 ]
 <768, 1086054>
 <384, 18130>
+the group label is
+3.135.2
 [ 768, 384, 1, 1, 1, 1 ]
 <768, 1086054>
 <384, 618>
+the group label is
+3.135.1
 [ 2880, 1440, 0, 1, 1, 1 ]
+the group label is
+3.36.1
 [ 2304, 1152, 1, 1, 1, 1 ]
+the group label is
+3.45.1
 [ 3840, 1920, 1, 1, 1, 1 ]
+the group label is
+3.27.1
 [ 103680, 51840, 1, 1, 1, 1 ]
+the group label is
 ***the number of groups satisfying all properties is***
 15
 
-Total time: 13.169 seconds, Total memory usage: 50.34MB
+Total time: 12.730 seconds, Total memory usage: 82.38MB

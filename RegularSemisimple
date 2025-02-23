@@ -5,6 +5,9 @@ S:=ZG[#ZG - 1]`subgroup;
 C:=Classes(G);
 P,phi:=quo<G|Center(G)>;
 XG:=CharacterTable(G);
+data:=Split(Read("gsp43.txt"));
+readdata:=[<r[1],sub<CSp(4,3)|eval(r[2])>,eval(r[3]),eval(r[4])> where r:=Split(s,":"):s in data];
+
 
 /* the element (-1,-1,-1,-1) */
 c:=Center(G).1;
@@ -142,7 +145,9 @@ H^1(Gamma,F_3) */
 good:=0;
 
 print("reproducing Whitmore's table plus more, 1 means is good");
+print("second line is the LMFDB label of the subgroup");
 print("[Gamma', Gamma, reasonable, tidy, regular semisimple in Sp4, regular semisimple in GSp4 minus Sp4]");
+
 
 for n in [3..#ZG] do
 P:=ZG[n]`subgroup;
@@ -176,6 +181,8 @@ IdentifyGroup(P);
 if Order(P meet S) le 1000 then
 IdentifyGroup(P meet S);
 end if;
+print("the group label is");
+for t in readdata do if IsConjugate(G,P,t[2]) then print t[1]; break; end if; end for;
 	end if;
 	end if;
 end for;
