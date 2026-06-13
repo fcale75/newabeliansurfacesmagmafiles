@@ -30,7 +30,7 @@ if Genus(C) eq 2 then
 				threetorsion:=threetorsion+1;
 				end if;
 			end for;
-/* if #Jac(X)[3](F2) = 8 then it contains (Z/3Z)^2 */
+/* if #Jac(X)[3](F3) = 8 then it contains (Z/3Z)^2 */
 		if threetorsion eq 8 then
 			print("###################");
 			print("an example with non-cyclic 3-torsion");

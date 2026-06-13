@@ -1,4 +1,4 @@
-Magma V2.23-9     Tue Dec 10 2024 11:39:36 on hegel    [Seed = 1616870308]
+Magma V2.23-9     Sat Jun 13 2026 18:17:50 on hegel    [Seed = 610511697]
 
 +-------------------------------------------------------------------+
 |       This copy of Magma has been made available through a        |
@@ -11,11 +11,11 @@ Magma V2.23-9     Tue Dec 10 2024 11:39:36 on hegel    [Seed = 1616870308]
 +-------------------------------------------------------------------+
 
 Type ? for help.  Type <Ctrl>-D to quit.
-****** the ordinary/non-ordinary curves of type 2C/2G/2H are ******
+****** the ordinary/non-ordinary curves of type 2C/6G/6H are ******
 [ 48, 48 ]
 ******* Given X/F_2 ordinary/non-ordinary with charpoly(rho_{3}(Frob_2)) of type
 2C/6G/6H  ****
-******* the possible Jac(F4)[3^oo] are ******
+******* the possible Jac(F16)[3^oo] are ******
  the trivial group occurs this many times: 
 [ 0, 0 ]
  the group (Z/3Z)^2 occurs this many times: 
@@ -23,7 +23,7 @@ Type ? for help.  Type <Ctrl>-D to quit.
 ******* Given the X/F_2 ordinary/non-ordinary with charpoly(rho_{3}(Frob_2)) of 
 type 2D/6I  ****
 [ 48, 0 ]
-******* the possible Jac(F4)[3^oo] are ******
+******* the possible Jac(F16)[3^oo] are ******
  the trivial group occurs this many times: 
 [ 0, 0 ]
  the group (Z/3Z)^2 occurs this many times: 
@@ -521,4 +521,4 @@ the number of curves is
     ]
 ]
 
-Total time: 1.580 seconds, Total memory usage: 32.09MB
+Total time: 1.530 seconds, Total memory usage: 32.09MB
