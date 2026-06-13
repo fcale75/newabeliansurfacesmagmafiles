@@ -27,7 +27,7 @@ if c in S then
 	Kernel(MC^4 - Id);
 	print("char and min polys of c^3 are");
 	F!CharacteristicPolynomial(c^3);
-	F!MinimalPolynomial(c);
+	F!MinimalPolynomial(c^3);
 	print("order of conjugacy class is");
 	N:=Centralizer(P,pc);
 	Index(P,N);

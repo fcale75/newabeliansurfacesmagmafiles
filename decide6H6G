@@ -1,6 +1,13 @@
 load "curves6H6G";
 load "divisionpolynomials.m";
 
+assert #v eq 16;
+assert #va eq 32;
+assert #vv eq 48;
+assert #Seqset(v) eq #v;
+assert #Seqset(va) eq #va;
+assert #Seqset(vv) eq #vv;
+
 poly := function(F);
 a:=Coefficient(F,6);
 b:=Coefficient(F,5);
