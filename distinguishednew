@@ -1,0 +1,55 @@
+F:=FiniteField(3);
+R<x>:=PolynomialRing(F);
+H<t>:=PolynomialRing(Rationals());
+Z:=Integers();
+count:=0;
+for a in [0..2] do
+for b in [0..2] do
+for c in [0..2] do
+for d in [0..2] do
+for e in [0..2] do
+for f in [0..2] do
+for g in [0..2] do
+try
+ C:=HyperellipticCurve(a*x^6 + b*x^5 + c*x^4 + d*x^3 + e*x^2 + f*x + g);
+	catch z;
+        continue;
+end try;
+if Genus(C) eq 2 then
+	A:=a*t^6 + b*t^5+c*t^4+d*t^3+e*t^2+f*t+g;
+	D:=HyperellipticCurve(A,0);
+	P:=H!EulerFactor(D,3); PR:=R!P;
+	b2:=Z!Coefficient(P,2);
+	if GCD(b2,3) eq 1 then
+/* checks first if the curve is ordinary */
+		BB:=AbelianGroup(Jacobian(HyperellipticCurve(R!A)));
+/* counts the number of elements of order 3 */
+		threetorsion:=0;
+		for b in BB do
+			if Order(b) eq 3 then
+				threetorsion:=threetorsion+1;
+				end if;
+			end for;
+/* if #Jac(X)[3](F2) = 8 then it contains (Z/3Z)^2 */
+		if threetorsion eq 8 then
+			print("###################");
+			print("an example with non-cyclic 3-torsion");
+			count:=count+1;
+			A;
+			print("F3-points of Jac(X)");
+			BB;
+			print("Euler factor mod 3");
+			Factorization(PR);
+			end if;
+                end if;
+	end if;
+end for;
+end for;
+end for;
+end for;
+end for;
+end for;
+end for;
+
+print("total number of curves with Jac(X)[3](F3)=(Z/3Z)^2");
+count;

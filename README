@@ -15,6 +15,10 @@ is given in
 
 ExplicitGSpF2
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Lemma 9.1.3 uses:
+
+atlas
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Lemma 9.1.4 uses:
 
 Qexamples
@@ -26,11 +30,12 @@ curvesoverF16
 GSpF3
 curves6H6G
 decide6H6G
+divisionpolynomials.m
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Lemma 9.3.1 uses:
 
 curvesoverF3
-distinguished
+distinguishednew
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Examples in 10.1.1 uses:
 
@@ -99,7 +104,7 @@ The forms have been chosen to have a non-
 zero coefficient of z^6 for the division
 algorithm to work. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-distinguished
+distinguishednew
 *****************************************
 Finds the X with Jac(X)(F_3)[3]= (Z/3Z)^2
 and confirms there are exactly 5 of them,

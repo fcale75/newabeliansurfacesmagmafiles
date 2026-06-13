@@ -1,0 +1,132 @@
+Magma V2.23-9     Tue Jun  2 2026 21:25:08 on hegel    [Seed = 1312535739]
+
++-------------------------------------------------------------------+
+|       This copy of Magma has been made available through a        |
+|                   generous initiative of the                      |
+|                                                                   |
+|                         Simons Foundation                         |
+|                                                                   |
+| covering U.S. Colleges, Universities, Nonprofit Research entities,|
+|               and their students, faculty, and staff              |
++-------------------------------------------------------------------+
+
+Type ? for help.  Type <Ctrl>-D to quit.
+51840
+    G
+    |  Cyclic(2)
+    *
+    |  C(2, 3)                    = S(4, 3)
+    1
+########Conjugacy classes in PGSp4(F3)PSp_4(F3)########
+class name
+2C
+[order of element,|conjugacy class|]
+[ 2, 36 ]
+char poly of lift
+x^4 + 2*x^2 + 1
+order 40a type
+[ 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 ]
+order 27 type
+[ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2 ]
+***************************
+class name
+2D
+[order of element,|conjugacy class|]
+[ 2, 540 ]
+char poly of lift
+x^4 + x^2 + 1
+order 40a type
+[ 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 ]
+order 27 type
+[ 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 ]
+***************************
+class name
+4C
+[order of element,|conjugacy class|]
+[ 4, 540 ]
+char poly of lift
+x^4 + x^3 + 2*x^2 + 2*x + 1
+order 40a type
+[ 4, 4, 4, 4, 4, 4, 4, 4, 4, 4 ]
+order 27 type
+[ 1, 2, 2, 2, 4, 4, 4, 4, 4 ]
+***************************
+class name
+4D
+[order of element,|conjugacy class|]
+[ 4, 1620 ]
+char poly of lift
+x^4 + 1
+order 40a type
+[ 4, 4, 4, 4, 4, 4, 4, 4, 4, 4 ]
+order 27 type
+[ 1, 1, 1, 1, 1, 2, 4, 4, 4, 4, 4 ]
+***************************
+class name
+6G
+[order of element,|conjugacy class|]
+[ 6, 1440 ]
+char poly of lift
+x^4 + 2*x^2 + 1
+order 40a type
+[ 2, 2, 6, 6, 6, 6, 6, 6 ]
+order 27 type
+[ 3, 3, 3, 3, 3, 6, 6 ]
+***************************
+class name
+6H
+[order of element,|conjugacy class|]
+[ 6, 1440 ]
+char poly of lift
+x^4 + 2*x^2 + 1
+order 40a type
+[ 2, 2, 6, 6, 6, 6, 6, 6 ]
+order 27 type
+[ 1, 1, 1, 2, 2, 2, 3, 3, 3, 3, 6 ]
+***************************
+class name
+6I
+[order of element,|conjugacy class|]
+[ 6, 4320 ]
+char poly of lift
+x^4 + x^2 + 1
+order 40a type
+[ 1, 1, 2, 3, 3, 6, 6, 6, 6, 6 ]
+order 27 type
+[ 3, 6, 6, 6, 6 ]
+***************************
+class name
+8A
+[order of element,|conjugacy class|]
+[ 8, 6480 ]
+char poly of lift
+x^4 + x^3 + x^2 + 2*x + 1
+order 40a type
+[ 1, 1, 2, 4, 8, 8, 8, 8 ]
+order 27 type
+[ 1, 2, 8, 8, 8 ]
+***************************
+class name
+10A
+[order of element,|conjugacy class|]
+[ 10, 5184 ]
+char poly of lift
+x^4 + 2*x^3 + x + 1
+order 40a type
+[ 10, 10, 10, 10 ]
+order 27 type
+[ 2, 5, 5, 5, 10 ]
+***************************
+class name
+12C
+[order of element,|conjugacy class|]
+[ 12, 4320 ]
+char poly of lift
+x^4 + x^3 + 2*x^2 + 2*x + 1
+order 40a type
+[ 4, 12, 12, 12 ]
+order 27 type
+[ 1, 4, 4, 6, 12 ]
+***************************
+
+Total time: 6.430 seconds, Total memory usage: 201.38MB

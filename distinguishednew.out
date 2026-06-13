@@ -1,0 +1,82 @@
+Magma V2.23-9     Tue Jun  2 2026 21:25:35 on hegel    [Seed = 961332183]
+
++-------------------------------------------------------------------+
+|       This copy of Magma has been made available through a        |
+|                   generous initiative of the                      |
+|                                                                   |
+|                         Simons Foundation                         |
+|                                                                   |
+| covering U.S. Colleges, Universities, Nonprofit Research entities,|
+|               and their students, faculty, and staff              |
++-------------------------------------------------------------------+
+
+Type ? for help.  Type <Ctrl>-D to quit.
+###################
+an example with non-cyclic 3-torsion
+t^6 + t^4 + t^2 + 1
+F3-points of Jac(X)
+Abelian Group isomorphic to Z/6 + Z/6
+Defined on 2 generators
+Relations:
+    6*BB.1 = 0
+    6*BB.2 = 0
+Euler factor mod 3
+[
+    <x + 2, 2>
+]
+###################
+an example with non-cyclic 3-torsion
+t^6 + t^4 + t^2 + 2
+F3-points of Jac(X)
+Abelian Group isomorphic to Z/3 + Z/3
+Defined on 2 generators
+Relations:
+    3*BB.1 = 0
+    3*BB.2 = 0
+Euler factor mod 3
+[
+    <x + 2, 2>
+]
+###################
+an example with non-cyclic 3-torsion
+2*t^6 + t^4 + t^2 + 1
+F3-points of Jac(X)
+Abelian Group isomorphic to Z/3 + Z/3
+Defined on 2 generators
+Relations:
+    3*BB.1 = 0
+    3*BB.2 = 0
+Euler factor mod 3
+[
+    <x + 2, 2>
+]
+###################
+an example with non-cyclic 3-torsion
+2*t^6 + t^4 + t^3 + t^2 + 2
+F3-points of Jac(X)
+Abelian Group isomorphic to Z/3 + Z/3
+Defined on 2 generators
+Relations:
+    3*BB.1 = 0
+    3*BB.2 = 0
+Euler factor mod 3
+[
+    <x + 2, 2>
+]
+###################
+an example with non-cyclic 3-torsion
+2*t^6 + t^4 + 2*t^3 + t^2 + 2
+F3-points of Jac(X)
+Abelian Group isomorphic to Z/3 + Z/3
+Defined on 2 generators
+Relations:
+    3*BB.1 = 0
+    3*BB.2 = 0
+Euler factor mod 3
+[
+    <x + 2, 2>
+]
+total number of curves with Jac(X)[3](F3)=(Z/3Z)^2
+5
+
+Total time: 1.330 seconds, Total memory usage: 32.09MB
