@@ -190,8 +190,3 @@ end for;
 print("***the number of groups satisfying all properties is***");
 good;
 	
-
-
-
-
-\
