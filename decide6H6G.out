@@ -1,4 +1,4 @@
-Magma V2.23-9     Tue Dec 10 2024 21:32:48 on hegel    [Seed = 221474216]
+Magma V2.23-9     Sat Jun 13 2026 17:43:16 on hegel    [Seed = 3263526353]
 
 +-------------------------------------------------------------------+
 |       This copy of Magma has been made available through a        |
@@ -595,4 +595,4 @@ now considering the curve number:
 is the conjugacy class 6G or 6H?
 the class is 6G
 
-Total time: 17024.060 seconds, Total memory usage: 316.53MB
+Total time: 18528.439 seconds, Total memory usage: 348.56MB
