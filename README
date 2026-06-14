@@ -56,13 +56,13 @@ Computation of all curves over F2 of
 genus 2, which in particular collates all
 the good ordinary curves.
 It also computes the number of curves
-with the same characterstic polynomial
+with the same characteristic polynomial
 as the conjugacy classes of types
 {2C,6G,6H}, {2D,6I}, 8A, 10A.
 Checks that in the ordinary 8A case,
 the mod-2 char poly of Frob_2 is always
 x^2(x^2+x+1) mod 2.
-Checks that in ths 6G/6H case, 
+Checks that in this 6G/6H case, 
 the mod-2 char poly or Frob_2 is
 x^2(x^2+1) mod 2 16 times
 x^2(x^2+x+1) mod 2 32
@@ -80,7 +80,7 @@ curvesoverF16
 computes the 144 ambiguous curves of
 possible type 2C/6G/6H and 2D/6I over F2
 now over F16 to verify that the 3-torsion
-is always (Z/3Z)^2 thus showng that 2C,2D
+is always (Z/3Z)^2 thus showing that 2C,2D
 do not occur.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 curvesoverF3
@@ -97,7 +97,8 @@ curves6H6G
 *****************************************
 list of curves with good reduction at 2
 such that rhobar_3(\Frob_2) is either of
-type 6G or 6H, computed by allcurvesF2.
+type 6G or 6H, computed by allcurvesF2
+and also by curvesoverF16
 Broken into three sets of curves, of size
 16,32,and 48 respectively. 
 The forms have been chosen to have a non-
@@ -118,7 +119,7 @@ then compute resolvents to get
 Gal(K/Q)-->S_27, then work out conjugacy
 class of Frob_2 from curves 6H6G data.
 This is very slow, sorry.
-It shows for the 6G/6H ambigious curves:
+It shows for the 6G/6H ambiguous curves:
 The 16 ordinary curves with
 charpoly(Frob_2)=x^2(x^2+1) mod 2 are 6H,
 and have lifts with a Weierstrass point,
@@ -135,7 +136,7 @@ compute the degree 40 permutation
 representation of Gal(K/Q)
 (via PGSp_4(F_3)-->S_40)).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-AllBig.tex
+AllBig.txt
 *****************************************
 File from LMFDB with all X such that Jac(X)
 has good reduction at 2 and 3 and surjective
