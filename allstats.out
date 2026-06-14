@@ -1,4 +1,4 @@
-Magma V2.23-9     Thu Nov  9 2023 09:47:44 on hegel    [Seed = 2928096447]
+Magma V2.23-9     Sat Jun 13 2026 21:51:11 on hegel    [Seed = 1174551356]
 
 +-------------------------------------------------------------------+
 |       This copy of Magma has been made available through a        |
@@ -13,7 +13,6 @@ Magma V2.23-9     Thu Nov  9 2023 09:47:44 on hegel    [Seed = 2928096447]
 Type ? for help.  Type <Ctrl>-D to quit.
 Loading "AllBig.txt"
 21552
-0
 103
 *** number of type 2C/6G/6H ****
 [1048    8  840    7]
@@ -36,4 +35,4 @@ Loading "AllBig.txt"
 14856
 0
 
-Total time: 17.460 seconds, Total memory usage: 92.31MB
+Total time: 17.899 seconds, Total memory usage: 92.31MB
